@@ -33,8 +33,15 @@ const UserApp = () => {
       </div>
       <div>
         User Details: <br />
-        {selectedUser.name} <br />
-        {selectedUser && selectedUser.company.name}
+        {Object.keys(selectedUser).length > 0 ? (
+          <div>
+            {selectedUser.name}
+            <br />
+            {selectedUser.company.name}
+          </div>
+        ) : (
+          <div>No User selected</div>
+        )}
       </div>
     </div>
   );
