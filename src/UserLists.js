@@ -4,7 +4,6 @@ const UserLists = ({ user, setSelectedUser, handleDelete }) => {
       <div onClick={() => setSelectedUser(user)}>
         {user.name} <button onClick={handleDelete}>delete</button>
       </div>
-      ;
     </div>
   );
 };

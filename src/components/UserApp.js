@@ -14,8 +14,15 @@ const UserApp = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  const handleDelete = () => {
-    console.log("hello delete");
+  const handleDelete = async () => {
+    try {
+      const response = await axios.delete(
+        "https://jsonplaceholder.typicode.com/users/1",
+      );
+      cosolog(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div>
