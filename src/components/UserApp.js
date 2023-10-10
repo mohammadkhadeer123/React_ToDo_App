@@ -7,7 +7,7 @@ const UserApp = () => {
   const [selectedUser, setSelectedUser] = useState("");
   const fetchData = async () => {
     const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users"
+      "https://jsonplaceholder.typicode.com/users",
     );
     setUsers(response.data);
   };
@@ -28,7 +28,6 @@ const UserApp = () => {
               setSelectedUser={setSelectedUser}
               handleDelete={handleDelete}
             />
-            // <li>{user.name}</li>
           ))}
         </ul>
       </div>
